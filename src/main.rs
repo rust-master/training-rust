@@ -3,6 +3,7 @@ mod conditions;
 mod fun_and_pro;
 mod primitive;
 mod strings;
+mod tuples;
 fn main() {
     // main in reality is procedure because it not return anything
     // println!("Enter the number");
@@ -30,5 +31,6 @@ fn main() {
     // fun_and_pro::some_string_procedure(string_var);
     // fun_and_pro::some_string_procedure("Some String".to_string());
 
-    conditions::conditions();
+    // conditions::conditions();
+    tuples::tuples();
 }
