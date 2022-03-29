@@ -1,4 +1,5 @@
 // use std::io;
+mod conditions;
 mod fun_and_pro;
 mod primitive;
 mod strings;
@@ -18,14 +19,16 @@ fn main() {
     // let result = fun_and_pro::some_function(10.1, 10);
     // println!("Result: {}", result);
 
-    fun_and_pro::some_procedure(10.1, 10);
+    // fun_and_pro::some_procedure(10.1, 10);
 
-    let string_slice_var: &str = "Hi Rust";
-    fun_and_pro::some_str_procedure(string_slice_var);
+    // let string_slice_var: &str = "Hi Rust";
+    // fun_and_pro::some_str_procedure(string_slice_var);
 
-    let string_var = String::from("Real String");
-    // fun_and_pro::some_str_procedure(string_var);  // compile error because string is immutable
-    fun_and_pro::some_str_procedure(&string_var); // coversion to &str
-    fun_and_pro::some_string_procedure(string_var);
-    fun_and_pro::some_string_procedure("Some String".to_string());
+    // let string_var = String::from("Real String");
+    // // fun_and_pro::some_str_procedure(string_var);  // compile error because string is immutable
+    // fun_and_pro::some_str_procedure(&string_var); // coversion to &str
+    // fun_and_pro::some_string_procedure(string_var);
+    // fun_and_pro::some_string_procedure("Some String".to_string());
+
+    conditions::conditions();
 }
