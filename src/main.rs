@@ -66,7 +66,7 @@ fn main() {
     // tuples();
     let mut record_var = Records::default();
 
-    println!("{:?}", record_var); /
+    println!("{:?}", record_var);
 
     record_var.timestamp = 1648544245;
 
