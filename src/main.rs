@@ -19,6 +19,22 @@ impl Records {
     }
 }
 
+fn print_if_is_valid(check_me: &dyn RecordsTrait) {
+    if check_me.is_valid() < 10 {
+        println!("Valid")
+    }
+}
+
+impl Default for Records {
+    fn default() -> Self {
+        Self {
+            call_count: 0,
+            data: "0x00as1dfdsdsfs".to_string(),
+            timestamp: 1648544172,
+        }
+    }
+}
+
 fn main() {
     // main in reality is procedure because it not return anything
     // println!("Enter the number");
@@ -48,11 +64,9 @@ fn main() {
 
     // conditions::conditions();
     // tuples();
-    let mut record_var = Records {
-        call_count: 0,
-        data: "0x00as1dfdsdsfs".to_string(),
-        timestamp: 1648544172,
-    };
+    let mut record_var = Records::default();
+
+    println!("{:?}", record_var); /
 
     record_var.timestamp = 1648544245;
 
@@ -78,4 +92,9 @@ fn main() {
     println!("Time Check: {}", time_check);
     let time_passed_check = record_var2.is_time_passed(1642266245);
     println!("Time Passed Check: {}", time_passed_check);
+
+    let is_valid = record_var2.is_valid();
+    println!("Is Valid: {}", is_valid);
+
+    print_if_is_valid(&record_var2);
 }
