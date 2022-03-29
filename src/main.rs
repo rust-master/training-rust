@@ -12,6 +12,13 @@ struct LiteRecord {
     states: i128,
     records: Records,
 }
+
+impl Records {
+    pub fn is_time_passed(&self, now: i32) -> bool {
+        self.timestamp < now
+    }
+}
+
 fn main() {
     // main in reality is procedure because it not return anything
     // println!("Enter the number");
@@ -42,6 +49,7 @@ fn main() {
     // conditions::conditions();
     // tuples();
     let mut record_var = Records {
+        call_count: 0,
         data: "0x00as1dfdsdsfs".to_string(),
         timestamp: 1648544172,
     };
@@ -53,11 +61,21 @@ fn main() {
         ..record_var
     };
 
-    let lite_record = LiteRecord {
+    // let lite_record = LiteRecord {
+    //     states: 123123,
+    //     records: Records {
+    //         data: "0X0013212ddfs".to_string(),
+    //         timestamp: 1642266245,
+    //     },
+    // };
+
+    let lite_record2 = LiteRecord {
         states: 123123,
-        records: Records {
-            data: "0X0013212ddfs".to_string(),
-            timestamp: 1642266245,
-        },
+        records: Records::new(1642266245),
     };
+
+    let time_check = record_var2.time_check(1642266245);
+    println!("Time Check: {}", time_check);
+    let time_passed_check = record_var2.is_time_passed(1642266245);
+    println!("Time Passed Check: {}", time_passed_check);
 }
