@@ -12,8 +12,8 @@ pub fn primitve() {
     println!("Min i8: {}", i8::MIN);
 
     let some_data: u8 = 10; // 0 to 255
-    let some_other_data = 255 + some_data; // ERROR: to big - overflow
-    let some_other_data2 = 1 - some_data; // ERROR: to small - underflow
+                            // let some_other_data = 255 + some_data; // ERROR: to big - overflow
+                            // let some_other_data2 = 1 - some_data; // ERROR: to small - underflow
 
     let some_data: i128 = 10;
     println!("Max i128: {}", i128::MAX);
