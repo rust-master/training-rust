@@ -12,3 +12,5 @@
 - Enumerations
 - Generics
 - Ownership and Borrowing
+- Lifetimes
+- Casting, Shadowing, Consts and Static
