@@ -2,7 +2,15 @@
 name = "training-rust"
 version = "0.1.0"
 edition = "2021"
+authors = ["Muhammad Zaryab Rafique <muhammadzaryabrafique@gmail.com>"]
+
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+rand = "0.8.5"
+# rand = [git]
+# rand  = [path]
+
+[dev-dependencies]
+pretty_assertions = "1.2.0"
