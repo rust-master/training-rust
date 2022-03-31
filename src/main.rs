@@ -7,6 +7,7 @@ mod structs_traits_impl;
 use structs_traits_impl::*;
 mod tuples;
 use tuples::*;
+mod geo_map;
 struct LiteRecord {
     // rust not support inheritance it support composion
     states: i128,
@@ -97,4 +98,10 @@ fn main() {
     println!("Is Valid: {}", is_valid);
 
     print_if_is_valid(&record_var2);
+
+    let location = geo_map::get_lahore_location();
+    println!(
+        "Lahore location is at lat: {} and long: {}",
+        location.lat, location.long
+    );
 }
