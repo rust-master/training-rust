@@ -1,8 +1,8 @@
 /target
-/src/rust 3d demo/node_modules/
-/src/rust 3d demo/target/
-/src/rust 3d demo/Cargo.lock
-/src/rust 3d demo/dist
-/src/rust 3d demo/package-lock.json
-/src/rust 3d demo/pkg
+/src/rust-3d-demo/node_modules/
+/src/rust-3d-demo/target/
+/src/rust-3d-demo/Cargo.lock
+/src/rust-3d-demo/dist
+/src/rust-3d-demo/package-lock.json
+/src/rust-3d-demo/pkg
 
