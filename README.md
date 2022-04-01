@@ -18,3 +18,8 @@
 - Lib
 - Cargo.toml
 - 3D Demo in Rust
+- 2D Graphics
+- 3D Graphics
+
+Course Credit: Doug Milford
+[Rust Course - Youtube Videos](https://www.youtube.com/watch?v=Az3jBd4xdF4&list=PLLqEtX6ql2EyPAZ1M2_C0GgVd4A-_L4_5&index=1).
