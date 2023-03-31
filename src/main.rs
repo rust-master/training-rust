@@ -36,7 +36,17 @@ impl Default for Records {
     }
 }
 
+// https://doc.rust-lang.org/rust-by-example/macros.html
+macro_rules! say_hello {
+    // `()` indicates that the macro takes no argument.
+    () => {
+        // The macro will expand into the contents of this block.
+        println!("Hello!")
+    };
+}
+
 fn main() {
+    say_hello!();
     // main in reality is procedure because it not return anything
     // println!("Enter the number");
 
