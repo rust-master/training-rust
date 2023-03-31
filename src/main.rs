@@ -36,6 +36,7 @@ impl Default for Records {
     }
 }
 
+//                    MACROS
 // https://doc.rust-lang.org/rust-by-example/macros.html
 macro_rules! say_hello {
     // `()` indicates that the macro takes no argument.
@@ -45,7 +46,30 @@ macro_rules! say_hello {
     };
 }
 
+// designators 
+macro_rules! create_function {
+    ($func_name:ident) => {
+        fn $func_name() {
+            println!("You called {:?}()", stringify!($func_name));
+        }
+    };
+}
+
+macro_rules! print_result {
+    ($expression:expr) => {
+        println!("{:?} = {:?}", stringify!($expression), $expression);
+    };
+}
+
+create_function!(foo);
+create_function!(bar);
+
 fn main() {
+    foo();
+    bar();
+
+    print_result!(1u32 + 1);
+
     say_hello!();
     // main in reality is procedure because it not return anything
     // println!("Enter the number");
